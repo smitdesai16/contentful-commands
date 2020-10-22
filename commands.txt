@@ -1,0 +1,38 @@
+npm install -g contentful-cli
+
+//login
+contentful login
+//logout
+contentful logout
+
+//get list of configs
+contentful config ls
+//add newly created config
+contentful config add --mt <cmt>
+
+//get space list
+contentful space ls
+//set space so no need to pass -s and -e all time
+contentful space use -s <space_id>
+//set master as env 
+contentful space environment use -e master
+
+//organization level data
+contentful organization ls
+
+//contenttype related data
+contentful content-type ls
+contentful content-type get --id test
+
+//get list of environment
+contentful space environment list
+
+
+
+
+migrate structure
+node 01-create-content-type.js
+node 02-edit-content-type.js
+
+migrate content
+node 03-content.js
